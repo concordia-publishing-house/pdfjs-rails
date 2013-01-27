@@ -1,9 +1,6 @@
 require "pdfjs-rails/version"
-
-module Pdfjs
-  module Rails
-    class Engine < ::Rails::Engine
-      
-    end
-  end
+require 'pdfjs-rails/view_helpers'
+if defined?(::Rails)
+  require 'pdfjs-rails/railtie' 
+  require 'pdfjs-rails/engine'
 end
